@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\HouseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,11 @@ Route::post(
     '/messages/store',
     [MessageController::class, 'store']
 )->name('message.store');
+
+
+
+
+Route::get(
+    '/houses',
+    [HouseController::class, 'index']
+)->name('index');
