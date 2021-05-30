@@ -22,6 +22,9 @@ tr:nth-child(even) {
 </head>
 <body>
 
+<a href="{{URL::route('message.create')}}"> Mesaj Yaz <a/>
+
+
 <h2>Messages Table</h2>
 
 <table>
@@ -43,7 +46,8 @@ tr:nth-child(even) {
     <td>{{$message->tel_no}}</td>
   </tr>
 @endforeach
-  
+
+
 
 </table>
 

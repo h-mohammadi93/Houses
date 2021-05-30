@@ -28,7 +28,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        //
+        return view('message.create');
     }
 
     /**
@@ -39,7 +39,17 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       // dd($request);
+       // echo "store sayfasına hoşgeldiniz";
+        $message = new Message();
+        $message ->name = $request -> name;
+        $message ->surname = $request -> surname;
+        $message ->content = $request -> content;
+        $message ->email = $request -> email;
+        $message ->tel_no = $request -> tel_no;
+
+        $message->save();
+
     }
 
     /**

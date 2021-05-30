@@ -22,3 +22,13 @@ Route::get(
     '/messages/index',
     [MessageController::class, 'index']
 )->name('index');
+
+Route::get(
+    '/messages/create',
+    [MessageController::class, 'create']
+)->name('message.create');
+
+Route::post(
+    '/messages/store',
+    [MessageController::class, 'store']
+)->name('message.store');
