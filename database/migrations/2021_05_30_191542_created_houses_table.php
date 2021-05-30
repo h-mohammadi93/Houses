@@ -22,6 +22,8 @@ class CreatedHousesTable extends Migration
         $table->integer('oda_sayisi');
         $table->integer('banyo_sayisi');
         $table->string('aciklama');
+                    $table->timestamps();
+
         }
         );
     }

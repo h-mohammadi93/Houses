@@ -28,7 +28,7 @@ class HouseController extends Controller
      */
     public function create()
     {
-        //
+        return view('house.create');
     }
 
     /**
@@ -39,7 +39,15 @@ class HouseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $house = new House();
+        $house -> adress =$request -> adress;
+        $house -> no= $request -> no;
+        $house -> oda_sayisi= $request -> oda_sayisi;
+        $house -> banyo_sayisi= $request -> banyo_sayisi;
+        $house -> aciklama= $request -> aciklama;
+        $house -> satilik_mi= $request -> satilik_mi;
+        $house -> save();
     }
 
     /**

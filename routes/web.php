@@ -35,9 +35,16 @@ Route::post(
 )->name('message.store');
 
 
-
-
 Route::get(
     '/houses',
     [HouseController::class, 'index']
 )->name('index');
+
+route::get(
+    'houses/create',
+    [HouseController::class,'create']
+)
+->name('house.create');
+
+route::post('/house/store',[HouseController::class,'store'])
+->name('house.store');
