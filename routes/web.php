@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\HouseController;
-
+use App\Http\Controllers\ClientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,3 +48,15 @@ route::get(
 
 route::post('/house/store',[HouseController::class,'store'])
 ->name('house.store');
+
+
+route::get(
+    '/clients/index',
+    [ClientController::class,'index']
+)->name('index');
+
+route::get('/client/create',[ClientController::class,'create'])
+->name('client.create');
+
+route::post('client/store',[ClientController::class,'store'])
+->name('client.store');
